@@ -1,0 +1,9 @@
+<li class="todo-item">
+    <h3 [ngClass]="{'is-done': !todo.isActive}">TITLE: {{todo.title}}</h3>
+    <p [ngClass]="{'is-done': !todo.isActive}">DESCRIPTION: {{todo.description}}</p>
+    <div>
+        <label for="done">Mark As Done:</label>
+        <input type="checkbox" (click)="toggleTodo(todo)" [checked]="!todo.isActive">
+    </div>
+    <button class="delete-btn" (click)="deleteTodo(todo)">DELETE</button>
+</li>

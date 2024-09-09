@@ -1,0 +1,14 @@
+<div class="add-todo-container">
+    <h2>ADD A TODO!</h2>
+    <form (ngSubmit)="handleSubmit()">
+        <div>
+            <label for="title">TITLE</label>
+            <input type="text" id="title" name="title" placeholder="Enter Todo Title" [(ngModel)]="title" />
+        </div>
+        <div>
+            <label for="description">DESCRIPTION</label>
+            <input type="text" id="description" name="description" placeholder="Enter Todo Description" [(ngModel)]="description" />
+        </div>
+        <button>ADD TODO</button>
+    </form>
+</div>

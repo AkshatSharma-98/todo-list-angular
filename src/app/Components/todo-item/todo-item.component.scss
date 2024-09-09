@@ -1,0 +1,27 @@
+.todo-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    min-width: 100%;
+    background-color: rgb(5, 5, 59);
+    border-radius: 10px;
+
+    >* {
+        margin: 5px;
+    }
+
+    .is-done {
+        color: rgb(209, 121, 121);
+        text-decoration: line-through;
+    }
+
+    button {
+        padding: 10px 15px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}

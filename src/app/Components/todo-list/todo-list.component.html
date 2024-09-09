@@ -1,0 +1,12 @@
+<div class="todo-list">
+    <app-add-todo (todoAddEmitter)="addTodo($event)"></app-add-todo>
+    <div class="todos-container">
+        <h1>MY TODOS</h1>
+        <h3 *ngIf="this.todos.length === 0; else elseBlock">NO TODOS TO DISPLAY!</h3>
+        <ng-template #elseBlock>
+            <ul *ngFor="let todo of todos">
+                <app-todo-item [todo]="todo" (todoDeleteEmitter)="deleteTodo($event)" (todoToggleEmitter)="toggleTodo($event)"></app-todo-item>
+            </ul>
+        </ng-template>
+    </div>
+</div>
